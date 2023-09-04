@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+
+{% block start %}
+  <h2>Notice Board</h2>
+  <ul>
+    {% for entry in noticeboard_entries %}
+      <li>{{ entry.user }}{{ entry.message }}</li>
+    {% empty %}
+      <li>No notices available.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+  
